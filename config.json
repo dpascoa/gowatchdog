@@ -1,11 +1,11 @@
 {
-  "interval_seconds": 5,
+  "interval_seconds": 30,
   "urls": [
     "https://www.google.com",
-    "https://httpstat.us/503",
+    "https://www.bbc.co.uk/",
     "https://thissitedoesnotexist123.com",
-    "https://sapo.pt",
-    "https://bbc.com",
-    "https://skynews.co.uk"
+    "https://www.ft.com/",
+    "https://monzo.com/",
+    "https://www.atptour.com"
   ]
 }
