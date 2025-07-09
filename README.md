@@ -3,7 +3,7 @@
 GoWatchdog is a lightweight uptime monitoring tool built in Go.  
 It checks websites periodically, logs their status, and serves a clean web dashboard with auto-refresh.
 
-![Screenshot](./screenshot.png)
+![image](https://github.com/user-attachments/assets/99aaf719-9603-494a-b30d-bce0dfef5975)
 
 ## Features
 - ✅ Website status checker (200 OK / DOWN)
@@ -23,10 +23,7 @@ go run main.go
 ```
 
 Then open http://localhost:8080 to view the dashboard.
-
-
 ___
-
 
 ## Example config.json
 ```bash
@@ -34,7 +31,7 @@ ___
   "interval_seconds": 30,
   "urls": [
     "https://www.google.com",
-    "https://httpstat.us/503"
+    "https://developer.mozilla.org/en-US/"
   ]
 }
 ```
