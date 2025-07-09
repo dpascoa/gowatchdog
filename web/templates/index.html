@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoWatchdog Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+  <h1>📡 GoWatchdog</h1>
+  <p class="timestamp">Last updated: {{.Now}}</p> 
+  <table>
+    <thead>
+      <tr>
+        <th>Website</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{range $url, $status := .Statuses}}
+      <tr>
+        <td>{{$url}}</td>
+        <td class="{{statusClass $status}}">{{$status}}</td>
+      </tr>
+      {{end}}
+    </tbody>
+  </table>
+
+  <p id="refreshNotice" class="refresh-info"></p>
+</div>
+
+
+<script>
+  let countdown = 10;
+  const refreshNotice = document.getElementById("refreshNotice");
+
+  const interval = setInterval(() => {
+    refreshNotice.textContent = `⏳ Refreshing in ${countdown--}s`;
+    if (countdown < 0) {
+      clearInterval(interval);
+      location.reload();
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>

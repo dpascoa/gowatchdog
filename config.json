@@ -1,0 +1,11 @@
+{
+  "interval_seconds": 5,
+  "urls": [
+    "https://www.google.com",
+    "https://httpstat.us/503",
+    "https://thissitedoesnotexist123.com",
+    "https://sapo.pt",
+    "https://bbc.com",
+    "https://skynews.co.uk"
+  ]
+}
